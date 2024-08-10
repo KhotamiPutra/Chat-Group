@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    display: flex;
+    background-color: #131517;
+    width: 100%;
+    height: 86.9vh;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #212229;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+nav .profile img {
+    width: 25px;
+    height: 25px;
+}
+
+.connection {
+    background-color: #212229;
+    width: 20%;
+    color: white;
+    height: 100%;
+}
+
+.connection ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.connection ul li {
+    background-color: #383a46;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.connection ul li:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+.connection button {
+    background-color: #007BFF; /* Warna biru */
+    color: white; /* Warna teks putih */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.chat {
+    width: 60%;
+}
+
+#chatHeader {
+    background-color: #212229;
+    padding: 5px;
+    color: white;
+}
+
+#chatMessages {
+    overflow-y: auto;
+    padding-left: 20px;
+    height: 80%;
+    color: white;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sent-message {
+    align-self: flex-end;
+    background-color: #296EFF;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.received-message {
+    align-self: flex-start;
+    background-color: #383a46;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#groupList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#friendList {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+#groupMembersContainer {
+    width: 20%;
+    color: white;
+}
+#groupMembersContainer a button {
+    background-color: #007bff; /* Warna biru */
+    color: white; /* Warna teks putih */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Sudut border yang melengkung */
+    cursor: pointer; /* Cursor pointer menunjukkan bisa diklik */
+    text-decoration: none; /* Menghilangkan garis bawah teks */
+}
+
+#groupMembersContainer a button:hover {
+    background-color: #0056b3; /* Warna saat hover */
+}
+#addFriendForm {
+    display: none;
+}
+
+.modal {
+    display: none; /* Sembunyikan modal secara default */
+    position: fixed; /* Tetap di tempat, di atas semua konten */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+    z-index: 1000; /* Pastikan modal berada di atas semua konten lain */
+}
+.modal-content {
+    background-color: #212229; /* Warna latar sesuai tema */
+    margin: 15% auto; /* Posisi di tengah secara vertikal dan horizontal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Lebar modal */
+    border-radius: 10px; /* Border bulat */
+}
+
+.modal-content input[type="text"] {
+    width: 90%; /* Lebar input */
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.modal-content button {
+    background-color: #296EFF; /* Warna tombol sesuai tema */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-results {
+    position: absolute;
+    background-color: #000000;
+    width: calc(100% - 20px);
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    display: none; /* Sembunyikan secara default */
+}
+.search-results div {
+    padding: 10px;
+    cursor: pointer;
+}
+.search-results div:hover {
+    background-color: #000000;
+}
+
+/* Style untuk container input pesan */
+#messageInputContainer {
+    display: flex; /* Menggunakan flexbox untuk layout */
+}
+
+/* Style untuk input pesan */
+#messageInput {
+    flex-grow: 1; /* Input mengambil ruang tersisa */
+    padding: 8px 12px;
+    border: 1px solid #ced4da; /* Warna border */
+    border-radius: 4px; /* Sudut border yang melengkung */
+    margin-right: 10px; /* Jarak antara input dan tombol */
+}
+
+/* Style untuk tombol kirim */
+#sendMessageBtn {
+    padding: 8px 16px;
+    background-color: #007bff; /* Warna biru */
+    color: white; /* Warna teks putih */
+    border: none;
+    border-radius: 4px; /* Sudut border yang melengkung */
+    cursor: pointer; /* Cursor pointer menunjukkan bisa diklik */
+}
+
+#sendMessageBtn:hover {
+    background-color: #0056b3; /* Warna saat hover */
+}
